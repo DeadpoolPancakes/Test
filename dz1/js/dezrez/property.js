@@ -46,4 +46,5 @@ function getfulldetail(roleId)
 			$('#propsearch').hide();
 			$('#featured').hide();
 			$('html, body').animate({ scrollTop: 0 }, 'slow');
+			alert(bath);
 		}
