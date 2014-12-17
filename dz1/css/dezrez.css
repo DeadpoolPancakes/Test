@@ -134,7 +134,7 @@ max-height: 50px;
   height:450px;
   margin-top:25px;
   background-color:#484A50;
-  width:300px;
+  width:299px;
   margin-right:10px;
   margin-left:10px;
   color: #fff;
@@ -171,10 +171,18 @@ max-height: 50px;
   background-color:#0093D7;
   color:#fff;
   height:45px;
+  font-size: 14pt;
+  font-weight: bold;
+  padding-top:10px;
+  padding-bottom: 5px;
+  text-align: left;
+}
+.headtitle{
+  background-color:#0093D7;
+  color:#fff;
+  height:45px;
   font-size: 16pt;
   font-weight: bold;
-
-  padding-left: 20px;
   padding-top:5px;
   padding-bottom: 5px;
   text-align: left;
@@ -282,4 +290,24 @@ h3{
     font-size: 1em;
     color: #000;
     margin-top: 5px;
+}
+.prop{
+  text-align: center;
+  color: #000;
+  background-color: #fff;
+  margin-bottom: 10px;
+  margin-left: 10px;
+
+  
+}
+.primary{
+  margin-top: 10px;
+}
+#propsearch{
+    padding-right: 10px;
+  
+}
+.icons{
+  margin-top: 10px;
+  font-size: 10px;
 }

@@ -6,14 +6,13 @@
   };
   
   $.ajax({
-			  url: 'http://core-api-uat.dezrez.com/api/simplepropertyrole/search?APIKey=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2F1dGguZGV6cmV6LmNvbS9BcGlLZXlJc3N1ZXIiLCJhdWQiOiJodHRwczovL2FwaS5kZXpyZXouY29tL3NpbXBsZXdlYmdhdGV3YXkiLCJuYmYiOjE0MTc1MzU5ODEsImV4cCI6NDU3MzIwOTU4MSwiSXNzdWVkVG9Hcm91cElkIjoiMyIsIkFnZW5jeUlkIjoiMSIsInNjb3BlIjpbImltcGVyc29uYXRlX3dlYl91c2VyIiwiYmFzaWNfcHJvcGVydHlfcmVhZCJdfQ.1v0qDDdF27l-qPGW8YfrW33X45tlY5a02pwuxUj86jY',
+			  url: 'http://core-api-uat.dezrez.com/api/simplepropertyrole/search?APIKey='+apikey,
 			  type: 'POST',
 			  data: JSON.stringify(formData),
 			  dataType: 'json',
 			  success: function(dostuff) {outputsr(dostuff); },
 			  error: function() { alert('Aw Shitsnacks'); },
 			  beforeSend: setHeadersr,
-			  contentType : "application/json"
 			});
 			
 			function setHeadersr(xhr) {
@@ -30,24 +29,30 @@
 			var picture = "";
 			var description = "";
 			var flags = "";
+			var bed = "";
+			var bath = "";
+			var rec = "";
 			$.each(data, function(){
 				if(this){
+				  //console.log(this);
 					ref = this.RoleId;
-					street = this.Address.BuildingName + "," + this.Address.Street + "," + this.Address.Town;
+					street = this.Address.Street + "," + this.Address.Town;
 					price = this.Price.PriceValue;
+					if(this.RoomCountsDescription){
+					  bed = this.RoomCountsDescription.Bedrooms;
+					  bath = this.RoomCountsDescription.Bathrooms;
+				    rec = this.RoomCountsDescription.Receptions;
+					}
 					if(this.Images.length){
 						picture = this.Images[0].Url;
 					}
 					description = this.SummaryTextDescription;
-					property = property + '<div class="col-xs-12"><div class="row"><div class="col-xs-2 head"><i class="fa fa-bars fa-3x"></i></div><div class="col-xs-10 headtitle"><lead>Featured Property</lead></div></div><div class="row featprop"><img src="' + picture +'&width=280"/><strong>' + street + '</strong><p class="featdescription">' + description + '</p><button type="button" class="btn btn-primary">More Details</button></div></div>';
-				}
+          property = property + "<div class='row prop'><div class='row'><p class='h3'>"+ street +"</p></div><div class='row'><p class='lead'>£"+ price +"</p></div><div class='row'><div class='col-xs-12'><div class='col-xs-4'><p>"+ bed +" Bedrooms</p></div><div class='col-xs-4'><p>"+ rec +" Receptions</p></div><div class='col-xs-4'><p>"+ bath +" Bathrooms</p></div></div></div><div class='row primary'><img onclick='getfulldetail("+ ref + ")' src='" + picture +"&width=280'/></div><div class='row'>"+ description +"</div><div class='row'><div class='col-xs-6 pull-right'><div class='col-xs-6'>Request a call</div><div class='col-xs-6'><a onclick='getfulldetail("+ ref + ")'> Read More</a></div></div></div></div>";}
 				
 			});
     
     $('#propsearch').html(property);
-    //$('#buy').hide();
     $('#featured').hide();
-    //$('#search').show();
     $('#propsearch').show();
     
   

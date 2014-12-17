@@ -29,9 +29,6 @@
         <div class="container body">
           <div class="row">
             <div class="row front center">
-              <div id="search" class="col-xs-8 searchform">
-                
-              </div>
               <div id="buy" class="col-xs-8 searchform">
                 <div class="row head">
                   <div class="col-xs-2"><i class="fa fa-home fa-3x "></i></div>
@@ -39,7 +36,7 @@
                 </div>
                           <form id="salesearch" action="" role="form">
                             <input type="hidden" value="1" id="BranchIdList" name="BranchIdList"/>
-                            <input type="hidden" value="10" id="PageSize" name="PageSize"/>
+                            <input type="hidden" value="" id="PageSize" name="PageSize"/>
                             <div class="form-group">
                               <div class="row">
                                 <p style="margin-left: 20px;">Select your criteria below and click search.</p>
@@ -89,35 +86,30 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-4">
-
                                 	<div id="listsearch" class="btn btn-primary btn-block">View List</div>
                                 </div>
                                 <div class="col-xs-4">
-
-                                	<button type="submit" class="btn btn-primary btn-block">View Map</button>
+                                	<div id="mapsearch" type="submit" class="btn btn-primary btn-block">View Map</div>
                                 </div>
                                 <div class="col-xs-4">
-
-                                	<button type="submit" class="btn btn-primary btn-block">Reset</button>
+                                	<div id="reset" type="submit" class="btn btn-primary btn-block">Reset</div>
                                 </div>
                             </div>
                           </form>  
                         </div>
+                      
             <div id="contact" class="col-xs-4 contact search">
               
             </div>
             <div id="sidenav" class="col-xs-4 sidenav search pull-right">
               
             </div>
-            </div>
-            <div class="row front center">
-            <div id="propsearch" class="col-xs-8 featuredbuy">
-              
-            </div>
             <div id="featured" class="col-xs-8 featuredbuy">
               
             </div>
-            
+            <div id="propsearch" class="col-xs-8 featuredbuy">
+              
+            </div>  
             </div>
           </div>
         </div>
@@ -129,28 +121,36 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/dezrez/config.js"></script>
     <script src="js/dezrez/latest.js"></script>
     <script src="js/dezrez/featured.js"></script>
     <script src="js/dezrez/search.js"></script>
+    <script src="js/dezrez/property.js"></script>
     <script type="text/javascript">
        $(document).ready(function(e) {
-         
+        $('#propsearch').hide(); 
 		    $('#nav').load("nav.html");
     		$('#footer').load("footer.html");
     		$('#contact').load("contact.html");
     		$('#sidenav').load("sidenav.html");
-    		
+    		param();
     		getlatest();
     		getsearchresult();
-    		
-    		
-    		
         });
       
       $('#listsearch').click(function()
       {
         search();
         
+      });
+      $('#mapsearch').click(function()
+      {
+      alert("map coming soon")
+      
+      });
+      $('#reset').click(function(){
+        
+        $('#salesearch').trigger("reset");
       });
       
 

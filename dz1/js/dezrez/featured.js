@@ -38,7 +38,7 @@ function getsearchresult() {
 						picture = this.Images[0].Url;
 					}
 					description = this.SummaryTextDescription;
-					property = property + '<div class="col-xs-4 featured"><div class="row"><div class="col-xs-2 head"><i class="fa fa-bars fa-3x"></i></div><div class="col-xs-10 headtitle"><lead>Featured Property</lead></div></div><div class="row featprop"><img src="' + picture +'&width=280"/><strong>' + street + '</strong><p class="featdescription">' + description + '</p><button type="button" class="btn btn-primary">More Details</button></div></div>'
+					property = property + '<div class="col-xs-4 featured"><div class="row"><div class="col-xs-2 head"><i class="fa fa-bars fa-3x"></i></div><div class="col-xs-10 headtitle"><lead>Featured Property</lead></div></div><div class="row featprop"><img src="' + picture +'&width=280"/><strong>' + street + '</strong><p class="featdescription">' + description + '</p><button type="button" onclick="getfulldetail('+ ref + ')" class="btn btn-primary">More Details</button></div></div>'
 				}
 				
 			})
