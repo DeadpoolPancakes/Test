@@ -1,0 +1,285 @@
+/* Makes images fully responsive */
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------- Carousel Styling ------------------- */
+
+
+.carousel-caption {
+  background-color: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  padding: 0 0 10px 25px;
+  color: #fff;
+  text-align: left;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 15;
+  margin: 0;
+  padding: 0 25px 25px 0;
+  text-align: right;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none;
+}
+
+
+/* ------------------- Section Styling - Not needed for carousel styling ------------------- */
+
+.section-white {
+  padding: 1.5em 0;
+}
+
+.section-white {
+  background-color: #fff;
+  color: #555;
+}
+
+
+
+@media screen and (min-width: 992px) {
+
+  .container {
+    max-width: 930px;
+  }
+
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  min-height: 100%;
+  position: relative;
+  
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+  margin-top:30px;
+  padding-top:15px;
+}
+
+
+/*-------Dezrez styling --*/
+*{
+font-family:Arial, Helvetica, sans-serif;	
+}
+.container{
+	padding:none !important;
+}
+.latest{
+  margin-top:50px;
+	background-color:#9BD8F6;
+}
+.latprop{
+  margin:5px;
+  background-color:#008ED6;
+  height:50px;
+  max-width:70px;	
+  padding:5px;
+}
+.latprop img{
+max-height: 50px;
+}
+.link{
+  padding-top:75px;
+  text-align:right;	
+}
+.link a{
+  color:#000;
+  font-size:1.1em;
+  padding: 10px 20px;
+
+	
+}
+.link a:hover{
+  background-color: #0093D7;
+  text-decoration: none;
+	
+}
+.navigation{
+  margin-top:10px;	
+}
+.logo{
+  padding:none !important;	
+}
+.featured{
+  height:450px;
+  margin-top:25px;
+  background-color:#484A50;
+  width:300px;
+  margin-right:10px;
+  margin-left:10px;
+  color: #fff;
+}
+
+.contact{
+  height:450px;
+  margin-top:25px;
+  background-color:#484A50;
+
+  width:300px;
+  margin-right:10px;
+  margin-left:10px;
+  color: #fff;
+}
+.sidenav{
+  min-height:300px;
+  background-color:#484A50;
+  width:300px;
+  margin-right:10px;
+  margin-left:20px;
+  padding-bottom: 30px;
+  color: #fff; 
+  
+}
+.head{
+  background-color:#0093D7;
+  color:#fff;
+  height:45px;
+
+  padding-top: 2px;
+}
+.headtitle{
+  background-color:#0093D7;
+  color:#fff;
+  height:45px;
+  font-size: 16pt;
+  font-weight: bold;
+
+  padding-left: 20px;
+  padding-top:5px;
+  padding-bottom: 5px;
+  text-align: left;
+}
+.featprop{
+  margin-top:10px;
+  color:#fff;	
+}
+.front{
+	background-color:#666;
+}
+
+.quick{
+  list-style:none;
+  text-align:left;	
+}
+#carousel-example-generic{
+  border:5px solid #0093D7;	
+}
+.featprop img{
+  padding: 10px;
+}
+.featprop > strong{
+  padding-left: 10px;
+  padding-right: 10px;
+  
+}
+.featprop > .btn{
+  margin-left: 10px;
+  margin-right: 10px;
+  
+}
+.logo img{
+  width: 260px;
+}
+.navbar-inverse{
+background-color:#0093D7;   
+border:none;
+}
+.footer{
+  	background-color:#0093D7;
+  
+}
+.properties{
+  padding:0 !important;
+  
+}
+.details{
+  margin-top: 10px;  
+  color: #fff;
+}
+p{
+  margin: 0px;
+}
+.title{
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.featdescription{
+  text-align: justify;
+  padding: 5px 10px;
+  
+}
+
+.container{
+  width: 930px !important;
+  
+}
+.navbar-form {
+    width: auto;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    border: 0px none;
+    box-shadow: none;
+}
+
+#featured{
+  padding: 0px !important;
+  margin: 0px;
+  margin-bottom: 20px;
+}
+.featuredbuy > .featured{
+  
+  margin-top: 0px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+.searchform{
+  color: #fff;
+  padding: 10px;
+  margin-top: 15px;
+  margin-left: 10px;
+  
+}
+h3{
+  margin-top: 10px;
+}
+.nav{
+    text-align: left;
+    padding: 10px;
+    background-color: rgb(204, 204, 204);
+    font-size: 1em;
+    color: #000;
+    margin-top: 5px;
+}

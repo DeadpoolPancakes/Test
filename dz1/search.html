@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/dezrez.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div id="nav"></div>
+    <section class="section-white">
+        <div class="container body">
+          <div class="row">
+            <div class="row front center">
+              <div id="search" class="col-xs-8 searchform">
+                
+              </div>
+              <div id="buy" class="col-xs-8 searchform">
+                <div class="row head">
+                  <div class="col-xs-2"><i class="fa fa-home fa-3x "></i></div>
+                  <div class="col-xs-10"><h3>Search For a Property to Buy</h3></div>
+                </div>
+                          <form id="salesearch" action="" role="form">
+                            <input type="hidden" value="1" id="BranchIdList" name="BranchIdList"/>
+                            <input type="hidden" value="10" id="PageSize" name="PageSize"/>
+                            <div class="form-group">
+                              <div class="row">
+                                <p style="margin-left: 20px;">Select your criteria below and click search.</p>
+                                <div class="col-xs-4 col-xs-offset-2">
+                                  <h4>Area or Town</h4>
+                                </div>
+                                <div class="col-xs-6">
+                                  <input type="text" class="form-control" id="searchAllAddress" name="searchAllAddress"/>
+                                </div>                                
+                              </div>
+                              <div class="row">
+                                <div class="col-xs-4 col-xs-offset-2">
+                                  <h4>Minimum Price</h4>
+                                </div>
+                                <div class="col-xs-6">
+                                  <input type="text" class="form-control" id="MinimumPrice" name="MinimumPrice"/>
+                                </div>                                
+                              </div>
+                              <div class="row">
+                                <div class="col-xs-4 col-xs-offset-2">
+                                  <h4>Maximum Price</h4>
+                                </div>
+                                <div class="col-xs-6">
+                                  <input type="text" class="form-control" id="MaximumPrice" name="MaximumPrice"/>
+                                </div>                                
+                              </div>
+                              <div class="row">
+                                <div class="col-xs-4 col-xs-offset-2">
+                                  <h4>Bedrooms</h4>
+                                </div>
+                                <div class="col-xs-6">
+                                  <input type="text" class="form-control" id="MinimumBedrooms" name="MinimumBedrooms"/>
+                                </div>                                
+                              </div>
+                              <div class="row">
+                                
+                                <div class="col-xs-4 col-xs-offset-2">
+                                  <h4>Show STC</h4>
+                                </div>
+                                <div class="col-xs-6">
+                                  	<select class="form-control">
+                                	  <option value="true">Yes</option>
+                                	  <option value="false">No</option>
+                                	</select>
+                                </div>                                
+                              </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4">
+
+                                	<div id="listsearch" class="btn btn-primary btn-block">View List</div>
+                                </div>
+                                <div class="col-xs-4">
+
+                                	<button type="submit" class="btn btn-primary btn-block">View Map</button>
+                                </div>
+                                <div class="col-xs-4">
+
+                                	<button type="submit" class="btn btn-primary btn-block">Reset</button>
+                                </div>
+                            </div>
+                          </form>  
+                        </div>
+            <div id="contact" class="col-xs-4 contact search">
+              
+            </div>
+            <div id="sidenav" class="col-xs-4 sidenav search pull-right">
+              
+            </div>
+            </div>
+            <div class="row front center">
+            <div id="propsearch" class="col-xs-8 featuredbuy">
+              
+            </div>
+            <div id="featured" class="col-xs-8 featuredbuy">
+              
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </section>  
+    <div id="footer"></div> 
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/dezrez/latest.js"></script>
+    <script src="js/dezrez/featured.js"></script>
+    <script src="js/dezrez/search.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(e) {
+         
+		    $('#nav').load("nav.html");
+    		$('#footer').load("footer.html");
+    		$('#contact').load("contact.html");
+    		$('#sidenav').load("sidenav.html");
+    		
+    		getlatest();
+    		getsearchresult();
+    		
+    		
+    		
+        });
+      
+      $('#listsearch').click(function()
+      {
+        search();
+        
+      });
+      
+
+      
+    </script>
+
+
+  </body>
+</html>
